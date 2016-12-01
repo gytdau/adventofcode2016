@@ -1,0 +1,22 @@
+{
+  "name": "aoc2016",
+  "version": "1.0.0",
+  "description": "My advent of code solutions for 2016 (with tests!)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gytdau/adventofcode2016.git"
+  },
+  "author": "Gytis Daujotas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gytdau/adventofcode2016/issues"
+  },
+  "homepage": "https://github.com/gytdau/adventofcode2016#readme",
+  "dependencies": {
+    "mocha": "^3.2.0"
+  }
+}
