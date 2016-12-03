@@ -15,4 +15,4 @@ function process(input) {
   return result
 }
 
-module.exports = { isValidTriangle, process}
+module.exports = { isValidTriangle, process }

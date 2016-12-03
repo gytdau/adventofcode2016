@@ -1,8 +1,10 @@
 var part1 = require('./part1')
+var part2 = require('./part2')
 
 function getAnswers() {
 console.log(
-  'Part 1 Answer:', part1.process(input)
+  'Part 1 Answer:', part1.process(input),
+  'Part 2 Answer:', part2.process(input)
   );
 }
 var input = `883  357  185
