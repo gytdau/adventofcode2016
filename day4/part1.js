@@ -1,5 +1,15 @@
 function process(input) {
+  var count = 0;
+  input = input.split("\n")
+  input.forEach(function (line) {
+    args = seperateIntoArguments(line)
+    correctChecksum = generateChecksum(frequencySort(args.name))
+    if(args.checksum == correctChecksum) {
+      count += parseInt(args.sectorID)
+    }
+  })
 
+  return count
 }
 function seperateIntoArguments(line) {
   var regex = /([a-z\-]+)-([0-9]+)\[([a-z]+)\]/
