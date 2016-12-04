@@ -1,5 +1,6 @@
 var assert = require('assert');
 var part1 = require('./part1');
+var part2 = require('./part2');
 
 
 describe("Part 1", function() {
@@ -45,6 +46,22 @@ describe("Part 1", function() {
     })
     it("should limit checksums to 5 characters", function() {
       assert.equal(part1.generateChecksum([["n", "e"], "l", "d", "e", "f", "g"]), "nelde")
+    })
+  })
+})
+describe("Part 2", function() {
+  describe("seperateIntoArguments", function() {
+    it("should replace dashes with spaces in the name", function() {
+      assert.deepEqual(part2.seperateIntoArguments("label-part-deux-111[abcde]"), {
+        name: "label part deux",
+        sectorID: 111,
+        checksum: "abcde"
+      })
+    })
+  })
+  describe("decrypt", function() {
+    it("should decrypt correctly", function() {
+      assert.equal(part2.decrypt("qzmt-zixmtkozy-ivhz", 343), "very encrypted name")
     })
   })
 })
