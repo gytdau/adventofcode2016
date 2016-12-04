@@ -57,7 +57,8 @@ function frequencySort(name) {
   return reverseCounts
 }
 function generateChecksum(sorted) {
-
+  //                     vvvvvvvvvvvvvvvv   - this is terrible ;P
+  return sorted.join("").replace(/,/g, '').substring(0, 5)
 }
 
 module.exports = {process, seperateIntoArguments, frequencySort, generateChecksum}
