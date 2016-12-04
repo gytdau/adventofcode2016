@@ -61,7 +61,9 @@ describe("Part 2", function() {
   })
   describe("decrypt", function() {
     it("should decrypt correctly", function() {
-      assert.equal(part2.decrypt("qzmt-zixmtkozy-ivhz", 343), "very encrypted name")
+      assert.equal(part2.decrypt("qzmt zixmtkozy ivhz", 343), "very encrypted name")
+      assert.equal(part2.decrypt("qzmt zixmtkozy ivhz", 5), "very encrypted name")
+      assert.equal(part2.decrypt("vxupkizork sgmtkzoi pkrrehkg zxgototm", 20), "projectile magnetic jellybea training")
     })
   })
 })

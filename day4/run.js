@@ -1,9 +1,13 @@
 var part1 = require('./part1')
+var part2 = require('./part2')
 
 function getAnswers() {
 console.log(
-  'Part 1 Answer:', part1.process(input)
-  );
+  'Part 1 Answer:', part1.process(input))
+  console.log(
+  'Part 2 Answer Table - Pick out the one you need'
+  )
+  part2.process(input)
 }
 var input = `vxupkizork-sgmtkzoi-pkrrehkgt-zxgototm-644[kotgr]
 mbiyqoxsm-pvygob-nocsqx-900[obmqs]
