@@ -21,17 +21,17 @@ describe("Part 1", function() {
   })
   describe("frequencySort", function() {
     it("should sort by frequency", function() {
-      assert.deepEqual(part1.alphabeticalSort("aaabb"),
-        [ "a", "b" ]
+      assert.deepEqual(part1.frequencySort("aaabb"),
+        [ ["a"], ["b"] ]
       )
     })
     it("should allow ties", function() {
-      assert.deepEqual(part1.alphabeticalSort("aabbc"),
-      [ ["a", "b"], "c"]
+      assert.deepEqual(part1.frequencySort("aabbc"),
+      [ ["a", "b"], ["c"]]
     )
   })
   it("should alphabetically sort in tied groups", function() {
-    assert.deepEqual(part1.alphabeticalSort("bbaacc"),
+    assert.deepEqual(part1.frequencySort("bbaacc"),
     [ ["a", "b", "c"]]
   )
 })
