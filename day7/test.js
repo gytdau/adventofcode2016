@@ -9,7 +9,7 @@ describe("Part 1", function() {
       assert.equal(part1.supportsTLS("aaa[bbb]ccc"), false)
     })
     it("should return true when an ABBA is found outside hypernet sequences", function() {
-      assert.equal(part1.supportsTLS("abba[bbb]ccc"), false)
+      assert.equal(part1.supportsTLS("abba[bbb]ccc"), true)
     })
     it("should return true when two ABBAs are found outside hypernet sequences", function() {
       assert.equal(part1.supportsTLS("abba[bbb]cbbc"), true)
@@ -17,13 +17,16 @@ describe("Part 1", function() {
     it("should return false when two ABBAs are found both inside and outside hypernet sequences", function() {
       assert.equal(part1.supportsTLS("abba[cbbc]ccc"), false)
     })
+    it("should support multiple hypernet sequences", function() {
+      assert.equal(part1.supportsTLS("abba[cbcc]cccabba[cbcc]ccc"), true)
+    })
   })
   describe("seperate", function() {
     it("should seperate correctly", function() {
-      assert.equal(part1.seperate("aaa[bbb]ccc"), ["aaa", "bbb", "ccc"])
+      assert.deepEqual(part1.seperate("aaa[bbb]ccc"), ["aaa", "bbb", "ccc"])
     })
     it("should tolerate variable lengths", function() {
-      assert.equal(part1.seperate("abcdef[a]abc"), ["abcdef", "a", "abc"])
+      assert.deepEqual(part1.seperate("abcdef[a]abc"), ["abcdef", "a", "abc"])
     })
   })
   describe("containsABBA", function() {
