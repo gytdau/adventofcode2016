@@ -2,6 +2,9 @@ function process(input) {
   var count = 0;
   input = input.split("\n")
   input.forEach(function (line) {
+    if(line === "") {
+      return
+    }
     args = seperateIntoArguments(line)
     correctChecksum = generateChecksum(frequencySort(args.name))
     decryptedName = decrypt(args.name, parseInt(args.sectorID))
